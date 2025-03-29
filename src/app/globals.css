@@ -1,21 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@300;400;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@keyframes float-hearts {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100px 100px;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+.bg-heart-pattern {
+  background-image: url('/images/heart.png'); /* Substitua pelo caminho da sua imagem de corações */
+  background-size: 50px 50px;
+  background-repeat: repeat;
+}
+
+.animate-float {
+  animation: float-hearts 10s linear infinite;
 }
